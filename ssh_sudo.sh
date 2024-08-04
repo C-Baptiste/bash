@@ -9,3 +9,11 @@ EOF1
 
 ssh -t ...@... "sudo -S ls /etc"
 shc -f test.sh -o test.sh.x
+
+
+r=$(ls -la /etc 2>&1)
+cat <<EOF
+<p>
+${r}
+</p>
+EOF
