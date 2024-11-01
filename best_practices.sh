@@ -157,3 +157,6 @@ trap finish EXIT ERR
 MY_VARIABLE=$(vault kv get -field MY_FIELD PATH/TO/MY/SECRET)
 
 echo "$MY_VARIABLE"
+
+# gen pwd
+dd if=/dev/random count=1 | sha256sum
